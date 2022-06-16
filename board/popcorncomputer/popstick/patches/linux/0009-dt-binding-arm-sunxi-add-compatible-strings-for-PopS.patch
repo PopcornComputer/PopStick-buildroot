@@ -1,0 +1,37 @@
+From 0f34ac5ef18707c102f00447090228f5e6f703b0 Mon Sep 17 00:00:00 2001
+From: Icenowy Zheng <uwu@icenowy.me>
+Date: Mon, 10 Oct 2022 23:31:35 +0800
+Subject: [PATCH 09/10] dt-binding: arm: sunxi: add compatible strings for
+ PopStick v1.1
+
+SourceParts PopStick is a F1C200s-based stick-shaped SBC.
+
+Add a compatible string list for its v1.1 version (the first public
+one).
+
+Signed-off-by: Icenowy Zheng <uwu@icenowy.me>
+---
+ Documentation/devicetree/bindings/arm/sunxi.yaml | 7 +++++++
+ 1 file changed, 7 insertions(+)
+
+diff --git a/Documentation/devicetree/bindings/arm/sunxi.yaml b/Documentation/devicetree/bindings/arm/sunxi.yaml
+index 3ad1cd50e3fe..c6e0ad7f461d 100644
+--- a/Documentation/devicetree/bindings/arm/sunxi.yaml
++++ b/Documentation/devicetree/bindings/arm/sunxi.yaml
+@@ -807,6 +807,13 @@ properties:
+           - const: sinlinx,sina33
+           - const: allwinner,sun8i-a33
+ 
++      - description: SourceParts PopStick v1.1
++        items:
++          - const: sourceparts,popstick-v1.1
++          - const: sourceparts,popstick
++          - const: allwinner,suniv-f1c200s
++          - const: allwinner,suniv-f1c100s
++
+       - description: SL631 Action Camera with IMX179
+         items:
+           - const: allwinner,sl631-imx179
+-- 
+2.37.1
+

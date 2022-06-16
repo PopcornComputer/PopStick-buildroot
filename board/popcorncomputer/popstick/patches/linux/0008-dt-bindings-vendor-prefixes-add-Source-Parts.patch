@@ -1,0 +1,34 @@
+From 61b0a4b1d7732b3c0523660ddf08c50e34c8bbba Mon Sep 17 00:00:00 2001
+From: Icenowy Zheng <uwu@icenowy.me>
+Date: Wed, 8 Jun 2022 12:47:41 +0800
+Subject: [PATCH 08/10] dt-bindings: vendor-prefixes: add Source Parts
+
+Source Parts Inc. [1] is a company that makes a series of SBCs, SoMs,
+etc under a brand called Popcorn Computer [2].
+
+Add it to the vendor prefixes list.
+
+[1] https://source.parts/
+[2] https://popcorncomputer.com/
+
+Signed-off-by: Icenowy Zheng <uwu@icenowy.me>
+---
+ Documentation/devicetree/bindings/vendor-prefixes.yaml | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/Documentation/devicetree/bindings/vendor-prefixes.yaml b/Documentation/devicetree/bindings/vendor-prefixes.yaml
+index 6e323a380294..035ef859fbc5 100644
+--- a/Documentation/devicetree/bindings/vendor-prefixes.yaml
++++ b/Documentation/devicetree/bindings/vendor-prefixes.yaml
+@@ -1203,6 +1203,8 @@ patternProperties:
+     description: Solomon Systech Limited
+   "^sony,.*":
+     description: Sony Corporation
++  "^sourceparts,.*":
++    description: Source Parts Inc.
+   "^spansion,.*":
+     description: Spansion Inc.
+   "^sparkfun,.*":
+-- 
+2.37.1
+

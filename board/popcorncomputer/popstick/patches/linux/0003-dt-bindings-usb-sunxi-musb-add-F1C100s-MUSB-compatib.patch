@@ -1,0 +1,31 @@
+From 2d11ef745bfd322cc40e92ba917c9db26917e1d7 Mon Sep 17 00:00:00 2001
+From: Icenowy Zheng <uwu@icenowy.me>
+Date: Tue, 7 Jun 2022 01:21:47 +0800
+Subject: [PATCH 03/10] dt-bindings: usb: sunxi-musb: add F1C100s MUSB
+ compatible string
+
+Allwinner F1C100s has a hybrid MUSB controller between the A10 one and
+the A33 one.
+
+Add a compatible string for it.
+
+Signed-off-by: Icenowy Zheng <uwu@icenowy.me>
+---
+ .../devicetree/bindings/usb/allwinner,sun4i-a10-musb.yaml        | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/Documentation/devicetree/bindings/usb/allwinner,sun4i-a10-musb.yaml b/Documentation/devicetree/bindings/usb/allwinner,sun4i-a10-musb.yaml
+index 8992eff6ce38..9ae634280bf4 100644
+--- a/Documentation/devicetree/bindings/usb/allwinner,sun4i-a10-musb.yaml
++++ b/Documentation/devicetree/bindings/usb/allwinner,sun4i-a10-musb.yaml
+@@ -17,6 +17,7 @@ properties:
+       - const: allwinner,sun6i-a31-musb
+       - const: allwinner,sun8i-a33-musb
+       - const: allwinner,sun8i-h3-musb
++      - const: allwinner,suniv-f1c100s-musb
+       - items:
+           - enum:
+               - allwinner,sun8i-a83t-musb
+-- 
+2.37.1
+

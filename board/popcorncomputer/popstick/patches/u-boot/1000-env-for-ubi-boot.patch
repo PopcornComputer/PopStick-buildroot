@@ -1,0 +1,13 @@
+diff --git a/include/configs/sunxi-common.h b/include/configs/sunxi-common.h
+index 068340aa96..cdec147f03 100644
+--- a/include/configs/sunxi-common.h
++++ b/include/configs/sunxi-common.h
+@@ -396,6 +396,8 @@
+ 	"uuid_gpt_system=" UUID_GPT_SYSTEM "\0" \
+ 	"partitions=" PARTS_DEFAULT "\0" \
+ 	BOOTCMD_SUNXI_COMPAT \
++	"bootargs=console=ttyS0,115200 ubi.mtd=1 root=ubi0:ubifs rootfstype=ubifs\0" \
++	"bootcmd=ubifsmount ubi:ubifs && ubifsload ${kernel_addr_r} /boot/zImage && ubifsload ${fdt_addr_r} /boot/suniv-f1c200s-popstick-v1.1.dtb && bootz ${kernel_addr_r} - ${fdt_addr_r}\0" \
+ 	BOOTENV
+ 
+ #else /* ifndef CONFIG_SPL_BUILD */

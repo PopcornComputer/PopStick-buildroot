@@ -1,0 +1,36 @@
+From 3d965684feb4cd8c16f5c1cfa1d7b91697f53473 Mon Sep 17 00:00:00 2001
+From: Icenowy Zheng <uwu@icenowy.me>
+Date: Tue, 7 Jun 2022 01:31:41 +0800
+Subject: [PATCH 01/10] mailmap: update Icenowy Zheng's mail address
+
+Due to the SMTP provider adopted by AOSC applied some more restricted
+rate limit that is not suitable for sending kernel patches, I switched
+to a mailbox hosted on my own domain name now. In addition, there's a
+single commit that is pushed to the mainline kernel tree during my
+internship at Sipeed the last year.
+
+Map two AOSC mail addresses (both aosc.io and aosc.xyz domain names) and
+a defunct Sipeed mail address to the new mail address.
+
+Signed-off-by: Icenowy Zheng <uwu@icenowy.me>
+---
+ .mailmap | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/.mailmap b/.mailmap
+index 380378e2db36..59b7130c3d1b 100644
+--- a/.mailmap
++++ b/.mailmap
+@@ -168,6 +168,9 @@ Henrik Rydberg <rydberg@bitmath.org>
+ Herbert Xu <herbert@gondor.apana.org.au>
+ Huacai Chen <chenhuacai@kernel.org> <chenhc@lemote.com>
+ Huacai Chen <chenhuacai@kernel.org> <chenhuacai@loongson.cn>
++Icenowy Zheng <uwu@icenowy.me> <icenowy@aosc.io>
++Icenowy Zheng <uwu@icenowy.me> <icenowy@aosc.xyz>
++Icenowy Zheng <uwu@icenowy.me> <icenowy@sipeed.com>
+ Jacob Shin <Jacob.Shin@amd.com>
+ Jaegeuk Kim <jaegeuk@kernel.org> <jaegeuk@google.com>
+ Jaegeuk Kim <jaegeuk@kernel.org> <jaegeuk.kim@samsung.com>
+-- 
+2.37.1
+
