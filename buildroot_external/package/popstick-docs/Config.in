@@ -1,0 +1,2 @@
+config BR2_PACKAGE_POPSTICK_DOCS
+	bool "popstick-docs"
