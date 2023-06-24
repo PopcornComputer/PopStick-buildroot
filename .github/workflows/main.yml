@@ -6,17 +6,18 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - uses: webfactory/ssh-agent@v0.4.1
+    - uses: actions/checkout@v3
+    - uses: webfactory/ssh-agent@v0.8.0
       with:
         ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
         log-public-key: false
     - name: Cache downloads
-      uses: actions/cache@v1
+      uses: actions/cache/save@v3
+      if: always()
       with:
         path: dl/
         key: dl
-    - name: Compile
+    - name: Compile Buildroot with PopStick defconfig
       run: |
         make popstick_nand_defconfig
         make
