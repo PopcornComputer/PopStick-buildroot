@@ -12,12 +12,9 @@ jobs:
       with:
         path: dl/
         key: dl
-    - name: Update submodules
-      run: git submodule update --init
     - name: Compile
       run: |
-        cd buildroot
-        make BR2_EXTERNAL=$PWD/.. popstick_nand_defconfig
+        make popstick_nand_defconfig
         make
     - uses: actions/upload-artifact@v1
       with:
