@@ -21,7 +21,7 @@ jobs:
       run: |
         make popstick_nand_defconfig
         make
-    - uses: actions/upload-artifact@v1
+    - uses: actions/upload-artifact@v3
       with:
-        name: flash.bin
-        path: output/images/flash.bin
+        name: build_output_images.zip
+        path: output/images/
