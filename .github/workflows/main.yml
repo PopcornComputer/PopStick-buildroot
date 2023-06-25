@@ -21,7 +21,7 @@ jobs:
     - name: Compile Buildroot with PopStick defconfig
       run: |
         make popstick_nand_defconfig
-        make
+        make all
     - name: Save Download Cache
       uses: actions/cache/save@v3
       if: always()
@@ -31,9 +31,9 @@ jobs:
           output/
           flash.sh
         key: dl-and-output-dir
-    - name: Prepare Build Artifact & Checksum
+    - name: Prepare Build Artifacts & Perform Checksum
       working-directory: output/images
-      run:
+      run: |
         rm -rf .empty
         sha256sum *.* > checksums.txt
     - name: Upload Build Artifacts
