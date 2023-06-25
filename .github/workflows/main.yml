@@ -1,4 +1,4 @@
-name: CI
+name: Build Flashable PopStick NAND Image
 
 on: [push]
 
@@ -11,16 +11,25 @@ jobs:
       with:
         ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
         log-public-key: false
-    - name: Cache downloads
-      uses: actions/cache/save@v3
-      if: always()
+    - name: Restore Download Cache
+      uses: actions/cache/restore@v3
       with:
-        path: dl/
-        key: dl
+        path: |
+          dl/
+          output/
+        key: dl-and-output-dir
     - name: Compile Buildroot with PopStick defconfig
       run: |
         make popstick_nand_defconfig
         make
+    - name: Save Download Cache
+      uses: actions/cache/save@v3
+      if: always()
+      with:
+        path: |
+          dl/
+          output/
+        key: dl-and-output-dir
     - uses: actions/upload-artifact@v3
       with:
         name: build_output_images.zip
