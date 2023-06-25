@@ -24,4 +24,4 @@ jobs:
     - uses: actions/upload-artifact@v1
       with:
         name: flash.bin
-        path: buildroot/output/images/flash.bin
+        path: output/images/flash.bin
