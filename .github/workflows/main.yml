@@ -29,13 +29,14 @@ jobs:
         path: |
           dl/
           output/
-          flash.sh
         key: dl-and-output-dir
     - name: Prepare Build Artifacts & Perform Checksum
       working-directory: output/images
       run: |
         rm -rf .empty
+        cp ../../flash.sh .
         sha256sum *.* > checksums.txt
+        sha256sum zImage >> checksums.txt
     - name: Upload Build Artifacts
       uses: actions/upload-artifact@v3
       with:
