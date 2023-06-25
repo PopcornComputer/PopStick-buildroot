@@ -29,8 +29,15 @@ jobs:
         path: |
           dl/
           output/
+          flash.sh
         key: dl-and-output-dir
-    - uses: actions/upload-artifact@v3
+    - name: Prepare Build Artifact & Checksum
+      working-directory: output/images
+      run:
+        rm -rf .empty
+        sha256sum *.* > checksums.txt
+    - name: Upload Build Artifacts
+      uses: actions/upload-artifact@v3
       with:
-        name: build_output_images.zip
+        name: build_output_images
         path: output/images/
