@@ -1,0 +1,17 @@
+config BR2_PACKAGE_GADGET_INIT_SCRIPTS
+	bool "gadget-init-scripts"
+	select BR2_PACKAGE_SKELETON
+	select BR2_PACKAGE_DNSMASQ
+	select BR2_PACKAGE_DNSMASQ_DHCP
+
+if BR2_PACKAGE_GADGET_INIT_SCRIPTS
+
+config BR2_PACKAGE_GADGET_INIT_SCRIPTS_USB_GADGET
+	bool "USB Gadget Init"
+	select BR2_PACKAGE_SKELETON
+	select BR2_PACKAGE_DNSMASQ
+	select BR2_PACKAGE_DNSMASQ_DHCP
+	help
+	  This option enables usb gadget serial and ethernet on boot
+
+endif

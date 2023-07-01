@@ -1,0 +1,2 @@
+source "$BR2_EXTERNAL_DEEPFRY_PATH/package/gadget-init-scripts/Config.in"
+source "$BR2_EXTERNAL_DEEPFRY_PATH/package/popstick-docs/Config.in"
