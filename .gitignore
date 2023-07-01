@@ -1,7 +1,5 @@
-#/output
-/output/build
-/output/.br2*
-#/dl
+/output
+/dl
 /.auto.deps
 /.config.cmd
 /.config.old
