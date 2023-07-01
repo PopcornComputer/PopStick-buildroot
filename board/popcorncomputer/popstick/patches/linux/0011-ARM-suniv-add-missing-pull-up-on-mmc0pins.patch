@@ -1,0 +1,24 @@
+From 8d04a2f62741ece44fc0ec7d35a2e1ae7b21136d Mon Sep 17 00:00:00 2001
+From: Jose Angel Torres <jose@source.parts>
+Date: Mon, 31 Oct 2022 18:55:05 +0800
+Subject: [PATCH] ARM: suniv: add missing pull-up on mmc0pins
+
+---
+ arch/arm/boot/dts/suniv-f1c100s.dtsi | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/arch/arm/boot/dts/suniv-f1c100s.dtsi b/arch/arm/boot/dts/suniv-f1c100s.dtsi
+index 0edc17244..2cf66a9d9 100644
+--- a/arch/arm/boot/dts/suniv-f1c100s.dtsi
++++ b/arch/arm/boot/dts/suniv-f1c100s.dtsi
+@@ -164,6 +164,7 @@ mmc0_pins: mmc0-pins {
+ 				pins = "PF0", "PF1", "PF2", "PF3", "PF4", "PF5";
+ 				function = "mmc0";
+ 				drive-strength = <30>;
++				bias-pull-up;
+ 			};
+ 
+ 			spi0_pc_pins: spi0-pc-pins {
+-- 
+2.37.3
+
