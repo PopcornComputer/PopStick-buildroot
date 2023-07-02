@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-POPSTICK_DOCS_VERSION = a84a27d361ef3f263a889d17a79db15c5c71b864
+POPSTICK_DOCS_VERSION = ec1c046d94d597db4f527d9a303e6bc56539108b
 POPSTICK_DOCS_SITE = https://github.com/PopcornComputer/PopStick
 POPSTICK_DOCS_SITE_METHOD = git
 
