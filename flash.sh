@@ -29,4 +29,4 @@ else
     flash
 fi
 
-echo "Done"
+echo "Success! Have fun!"

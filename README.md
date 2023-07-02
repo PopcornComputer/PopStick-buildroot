@@ -1,5 +1,4 @@
 # PopStick™ Buildroot Environment
-[![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
 [![Follow Source Parts on Twitter][twitter-follow-shield]][twitter-follow]
 [![Subscribe to Source Parts' Subreddit][reddit-subscribers-shield]][sourceparts-subreddit]
 <p align="center"><img width="80%" src="https://usbcomputer.com/images/banner.jpg" alt="PopStick USB Computer Device"></p>
@@ -9,14 +8,13 @@
 
 ## Learn More
 For a general overview, please visit the PopStick™ USB Computer website: [https://usbcomputer.com][usbcomputer]
+
 To learn how to use PopStick™ or learn in more detail about how it works, please make sure to check out the link to our documentation below.
 
 ## Documentation
 To view the documentation stored in this repository please visit: [https://docs.usbcomputer.com][usbcomputer-docs]
 
 If you have done something cool with **PopStick™** or feel that something is missing from the documentation, please feel free to open an issue on this repository or submit a Pull Request. The source files for our documentation website can be found in the /docs folder in this repository.
-
-**PopStick™** is a trademark of Source Parts Inc.
 
 ## Description of Buildroot from Official README
 ```
@@ -47,11 +45,10 @@ You can also find us on #buildroot on OFTC IRC.
 If you would like to contribute patches, please read
 https://buildroot.org/manual.html#submitting-patches
 ```
-
 ## License & Copyright
-Buildroot is licensed GPL2.[^1]
-GitHub workflow scripts and flash.sh script are licensed under a<br>
-Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+Buildroot is licensed GPL2.[^1]<br>
+GitHub workflow scripts and flash.sh script are licensed under a
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.<br>
 [![CC BY-NC-SA 4.0][cc-by-nc-sa-image]][cc-by-nc-sa]
 
 **PopStick™** is a trademark of Source Parts Inc.
