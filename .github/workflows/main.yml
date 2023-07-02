@@ -20,7 +20,7 @@ jobs:
         key: dl-and-output-dir
     - name: Compile Buildroot with PopStick defconfig
       run: |
-        make popstick_nand_defconfig
+        make BR2_EXTERNAL=$PWD/buildroot_external popstick_nand_defconfig
         make all
     - name: Save Download Cache
       uses: actions/cache/save@v3
