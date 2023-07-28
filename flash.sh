@@ -8,7 +8,7 @@ alias trace_off='{ PREV_STATUS=$? ; set +x; } 2>/dev/null; exit $PREV_STATUS'
 echo "Starting PopStick flashing sequence..."
 CURRENT_DIR=$(basename "$PWD")
 
-flash() {
+flash_nand() {
     trace_on
     xfel version
     xfel spinand erase 0x000000 134217728
@@ -23,10 +23,10 @@ flash() {
 if [[ $CURRENT_DIR = PopStick-buildroot ]]
 then
     pushd output/images
-    flash
+    flash_nand
     popd
 else
-    flash
+    flash_nand
 fi
 
 echo "Success! Have fun!"
