@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 # Writes a Linux Image to SPI-NAND on Popstick
-# This fkasing script requires the 'xfel' tool
+# This flasing script requires the 'xfel' tool
 
 setopt aliases
 alias trace_on='set -ex'
