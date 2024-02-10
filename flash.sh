@@ -6,6 +6,7 @@ setopt aliases
 alias trace_on='set -ex'
 alias trace_off='{ PREV_STATUS=$? ; set +x; } 2>/dev/null; exit $PREV_STATUS'
 echo "Starting PopStick flashing sequence..."
+
 CURRENT_DIR=$(basename "$PWD")
 
 flash_nand() {
@@ -20,10 +21,9 @@ flash_nand() {
     trace_off
 }
 
-if [[ $CURRENT_DIR = PopStick-buildroot ]]
-then
+if [[ $CURRENT_DIR == "PopStick-buildroot" ]]; then
     pushd output/images
-    flash_nand
+        flash_nand
     popd
 else
     flash_nand
